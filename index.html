@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subdomain Takeover Proof - Technical Demonstration</title>
+</head>
+<body>
+    <h1>🔓 SUBDOMAIN TAKEOVER PROOF</h1>
+    
+    <h2>Technical Evidence:</h2>
+    <div style="background: #f0f0f0; padding: 20px; margin: 10px;">
+        <h3>✅ CNAME Chain Proof:</h3>
+        <p>goodsparkgrants.desjardins.com → app705035.prod.cudawaas.com</p>
+        <p><strong>Status:</strong> CNAME ACTIVE and VULNERABLE</p>
+    </div>
+    
+    <div style="background: #fff3cd; padding: 20px; margin: 10px;">
+        <h3>✅ Service Control Proof:</h3>
+        <p>GitHub Pages: app705035.github.io ← <strong>UNDER MY CONTROL</strong></p>
+        <p><strong>Proof:</strong> This page is served from MY GitHub repository</p>
+    </div>
+    
+    <div style="background: #d4edda; padding: 20px; margin: 10px;">
+        <h3>✅ Vulnerability Proof:</h3>
+        <p>app705035.prod.cudawaas.com → <strong>NO DNS RECORDS</strong></p>
+        <p><strong>Result:</strong> DNS_PROBE_FINISHED_NXDOMAIN (Unclaimed Service)</p>
+    </div>
+
+    <h2>🎯 Takeover Demonstration:</h2>
+    <p>Once DNS caches expire (TTL: 21600 seconds),</p>
+    <p><strong>goodsparkgrants.desjardins.com WILL display THIS content!</strong></p>
+    
+    <hr>
+    <p><em>This is a security research demonstration - No actual attack is occurring</em></p>
+    <p>Timestamp: <span id="time"></span></p>
+    
+    <script>
+        document.getElementById('time').textContent = new Date().toString();
+    </script>
+</body>
+</html>
